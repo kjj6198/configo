@@ -25,8 +25,7 @@ func Load(filename string) bool {
 	file, err := ioutil.ReadFile(filename)
 
 	if err != nil {
-		fmt.Println("can not found config file.")
-		return false
+		fmt.Println("can not found config file, skip it...")
 	}
 
 	var config = make(map[string]string)
